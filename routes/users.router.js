@@ -7,16 +7,6 @@ const userServ = new UsersService();
 router.get('/', (req, res) => {
 const users = userServ.find();
 res.json(users);
-
-  //const { limit, offset } = req.query;
-  //if (limit && offset) {
-  //  res.json({
-  //    limit,
-  //    offset,
-  //  });
-  //} else {
-  //  res.send('Parameters not found');
-  // }
 });
 
 router.get('/:id', (req, res) => {
